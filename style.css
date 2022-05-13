@@ -37,7 +37,9 @@ main {
 
 img {
   width: 100%;
-  object-fit: fill;
+  object-fit: cover;
+
+  height: 100%;
 }
 
 .main__info {
@@ -111,18 +113,38 @@ button {
   width: 100%;
   padding: 1rem;
   margin-top: 2rem;
+  margin-bottom: 2rem;
   border: none;
   font-size: 1.2rem;
 }
 
 section {
-  margin-top: 1rem;
+  margin-top: 4rem;
 }
 
 .suggestions {
   display: flex;
+  flex-wrap: nowrap;
   gap: 2rem;
   margin: 2rem;
+  height: 100%;
+  overflow: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.suggestions::-webkit-scrollbar {
+  display: none;
+}
+
+.suggestions__item {
+  display: inline-block;
+}
+
+.suggestions__item img {
+  height: fit-content;
+  width: 350px;
 }
 
 @media screen and (max-width: 480px) {
@@ -153,4 +175,8 @@ section {
     margin-top: 4rem;
     margin-bottom: 1rem;
   }
+
+  .suggestions__item img {
+ 
+    width: 250px;
 }
