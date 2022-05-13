@@ -1,8 +1,128 @@
 * {
+  box-sizing: border-box;
   margin: 0px;
   padding: 0px;
   list-style: none;
   text-decoration: none;
   text-transform: uppercase;
   font-family: "Lato", sans-serif;
+  color: #4d4d4d;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: 200;
+}
+
+li + li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 0;
+}
+
+img {
+  width: 100%;
+  object-fit: fill;
+}
+
+.main__info {
+  padding: 3rem;
+}
+
+h1 {
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+h2 {
+  text-align: center;
+  font-weight: 400;
+}
+
+h4 {
+  font-weight: 400;
+  font-size: 0.85rem;
+  margin: 0.5rem 0 0.25rem;
+}
+h3,
+h5 {
+  font-weight: 200;
+  margin-bottom: 1.5rem;
+}
+
+.main__info--desc {
+  padding: 2rem 0;
+  text-transform: none;
+  font-weight: 200;
+  line-height: 1.5;
+}
+
+.badges {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  padding: 2rem 0;
+  justify-content: space-between;
+  margin-top: 0;
+}
+
+.badges__item:nth-child(2) {
+  align-self: flex-end;
+}
+
+.badges__item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-self: center;
+}
+
+.badges__item img {
+  max-width: 50px;
+}
+
+.badges__item p {
+  color: #948282;
+  padding: 0;
+}
+
+button {
+  background-color: #bfabab;
+  width: 100%;
+  padding: 1rem;
+  margin-top: 2rem;
+  border: none;
+  font-size: 1.2rem;
+}
+
+section {
+  margin-top: 1rem;
+}
+
+.suggestions {
+  display: flex;
+  gap: 2rem;
+  margin: 2rem;
+}
+
+@media screen and (min-width: 480px) {
+  body {
+    background-color: lightgreen;
+  }
 }
